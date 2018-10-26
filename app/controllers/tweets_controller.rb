@@ -37,7 +37,7 @@ class TweetsController < ApplicationController
     end 
   end 
   
-  get "/tweets/:id/edit"
+  get "/tweets/:id/edit" do 
   end
 
 
