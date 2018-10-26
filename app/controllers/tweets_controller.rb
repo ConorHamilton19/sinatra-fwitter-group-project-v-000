@@ -4,7 +4,8 @@ class TweetsController < ApplicationController
     erb :"/tweets/new"
   end 
   
-  get '/tweets' do 
+  get '/tweets' do
+      
     @tweets = Tweet.all
     erb :"/tweets/index"
   end 
