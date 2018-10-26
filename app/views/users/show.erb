@@ -2,7 +2,7 @@
 
 <h4>List of Tweets:</h4>
   <% @user.tweets.each do |tweet|%>
-    <p><%= tweet.content%>  <a href="/tweets/<%= tweet.id %>">Show Tweet</a><%= tweet.content%></p>
+    <p <a href="/tweets/<%= tweet.id %>">Show Tweet</a><%= tweet.content%></p>
   <% end %>
 
 <p><a href="/logout">Log Out</a></p>
