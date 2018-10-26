@@ -21,11 +21,14 @@ class TweetsController < ApplicationController
         @tweet = Tweet.create(content: params[:content])
         current_user.tweets << @tweet
         @tweet.save
-        erb :"/tweets/show/#{@tweet.id}"
+        redirect "/tweets/show/#{@tweet.id}"
      end 
     else 
       redirect "/login"
     end 
+  end 
+  
+  get "/tweets/show/:id" do 
   end 
 
 
