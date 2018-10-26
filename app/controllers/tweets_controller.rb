@@ -55,7 +55,7 @@ class TweetsController < ApplicationController
        redirect "/tweets/:id/edit"
       else 
         @tweet = Tweet.find_by_id(params[:id])
-        current_user.tweets << @tweet
+        @tweet.
         @tweet.save
         redirect "/tweets/#{@tweet.id}"
      end 
