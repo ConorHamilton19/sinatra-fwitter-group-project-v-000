@@ -49,7 +49,11 @@ class TweetsController < ApplicationController
       redirect '/login'
   end
   
-  patch "/tweets/:id"
+  patch "/tweets/:id" do 
+    if logged_in?
+      @tweet = Tweet.
+  end 
+  
   
   delete '/tweets/:id/delete' do
     if logged_in?
