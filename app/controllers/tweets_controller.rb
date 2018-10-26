@@ -42,6 +42,8 @@ class TweetsController < ApplicationController
   end 
   
   get "/tweets/:id/edit" do 
+    if logged_in?
+      
   end
   
   delete '/tweets/:id/delete' do
