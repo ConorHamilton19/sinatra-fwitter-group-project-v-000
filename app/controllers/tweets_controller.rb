@@ -28,8 +28,10 @@ class TweetsController < ApplicationController
     end 
   end 
   
-  get "/tweets/show/:id" do 
+  get "/tweets/:id" do 
   end 
+  
+  get "/tweets/:id/edit"
 
 
 end
