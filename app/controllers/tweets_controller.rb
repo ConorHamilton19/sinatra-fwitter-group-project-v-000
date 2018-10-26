@@ -51,7 +51,7 @@ class TweetsController < ApplicationController
   
   patch "/tweets/:id" do 
     if logged_in?
-      @tweet = Tweet.
+      
   end 
   
   
