@@ -4,6 +4,8 @@ class TweetsController < ApplicationController
     erb :"/tweets/new"
   end 
   
+  post 
+  
   get '/tweets' do
     if logged_in?  
       @tweets = Tweet.all
