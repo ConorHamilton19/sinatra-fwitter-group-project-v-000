@@ -50,8 +50,18 @@ class TweetsController < ApplicationController
   end
   
   patch "/tweets/:id" do 
-    if logged_in?
-      
+    if logged_in?  
+     if params[:content] == ""
+       redirect "/tweets/:id/edit"
+      else 
+        @tweet = Tweet.create(content: params[:content])
+        current_user.tweets << @tweet
+        @tweet.save
+        redirect "/tweets/#{@tweet.id}"
+     end 
+    else 
+      redirect "/login"
+    end 
   end 
   
   
