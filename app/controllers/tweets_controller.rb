@@ -19,9 +19,10 @@ class TweetsController < ApplicationController
        redirect "/tweets/new"
       else 
         @tweet = Tweet.create(content: params[:content])
+        @tweet.save
      end 
     else 
-      redirect "/users/login"
+      redirect "/login"
     end 
   end 
 
