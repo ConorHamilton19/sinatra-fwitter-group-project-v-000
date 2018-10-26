@@ -4,8 +4,6 @@ class TweetsController < ApplicationController
     erb :"/tweets/new"
   end 
   
-  post 
-  
   get '/tweets' do
     if logged_in?  
       @tweets = Tweet.all
@@ -13,6 +11,10 @@ class TweetsController < ApplicationController
     else
       redirect "/login"
     end 
+  end 
+  
+  post '/tweets' do
+    @tweet = Tweet.create(content: params[:content])
   end 
 
 
